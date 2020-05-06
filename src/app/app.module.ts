@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule} from "@angular/material";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { MatListModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatI
     MatCardModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

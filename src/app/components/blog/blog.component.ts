@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-blog',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  PostForm : FormGroup;
+
+  constructor( private formBuilder: FormBuilder) { 
+    this.PostForm = this.formBuilder.group(
+      {
+        title: ['', Validators.required],
+        body: ['']
+      }
+    )
+  }
 
   ngOnInit() {
   }

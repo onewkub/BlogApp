@@ -17,10 +17,13 @@
         <!-- Post -->
         <mat-card class="post">
             <mat-card-content>
-                <form>
+                <form [formGroup]="PostForm">
+                    <mat-form-field>
+                        <input formControlName="title" type="text" matInput placeholder="Title">
+                    </mat-form-field>
                     <mat-form-field style="width: 100%;" floatLabel="never">
                         <!-- <mat-label>HEY</mat-label> -->
-                        <textarea rows="8" matInput placeholder="Hey Yeah Yahoo !!"></textarea>
+                        <textarea formControlName="body" rows="8" matInput placeholder="Hey Yeah Yahoo !!"></textarea>
                       </mat-form-field>
                 </form>
             </mat-card-content>
