@@ -24,12 +24,28 @@ export class PostBlogComponent implements OnInit {
   }
 
   PostBlog(): void{
-    console.log(this.PostForm.value);
+    // console.log(this.PostForm.value);
+    var hashtagList = this.FindHashtags(this.PostForm.value.body);
     this.blogService.postBlog(this.PostForm.value).subscribe(res=>{
       console.log(res);
+      var blogID = res.value.blogId;
+      var htList = hashtagList.map(ht => {return {Bid: blogID, TagName: ht, b: res.value} });
+      console.log(htList);
+      this.blogService.addTag(htList).subscribe(res=> console.log(res));
     });
     this.PostForm.clearValidators();
     this.PostForm.reset();
   }
 
+  FindHashtags(searchText) {
+    var regexp = /(\s|^)\#\w\w+\b/gm
+    var result = searchText.match(regexp);
+    if (result) {
+        result = result.map(function(s){ return s.trim().replace('#', '');});
+        console.log(result);
+        return result;
+    } else {
+        return false;
+    }
+}
 }

@@ -1,5 +1,5 @@
 export class Blog {
     title: string;
-    body: string;
+    body: string
 }
 

@@ -27,4 +27,8 @@ export class BlogService {
   public putBlog(putForm, bid): Observable<any>{
     return this.http.put(`${this.apiUrl}/blog/bid`, putForm);
   }
+
+  public addTag(ht){
+    return this.http.post(`${this.apiUrl}/tag`, ht);
+  }
 }
