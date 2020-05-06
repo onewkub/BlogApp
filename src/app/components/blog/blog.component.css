@@ -27,20 +27,3 @@ h4{
     background-color: white;
 }
 
-.mat-card{
-    margin: 0.6rem auto;
-}
-
-.post{
-    width: 40rem;
-}
-
-.blog{
-    width: 40rem;
-    height: 10rem;
-}
-
-::ng-deep .hashtag{
-    color: rgb(132, 153, 247);
-    cursor: pointer;
-}

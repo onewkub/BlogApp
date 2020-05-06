@@ -8,36 +8,7 @@
         
     </div>
     <div class="feed">
-        <!-- Post -->
-        <mat-card class="post">
-            <mat-card-content>
-                <form [formGroup]="PostForm" #postForm>
-                    <mat-form-field>
-                        <input formControlName="title" type="text" matInput placeholder="Title" autocomplete="off">
-                    </mat-form-field>
-                    <mat-form-field style="width: 100%;" floatLabel="never">
-                        <!-- <mat-label>HEY</mat-label> -->
-                        <textarea BlogBody formControlName="body" rows="8" matInput placeholder="Hey Yeah Yahoo !!" autocomplete="off"></textarea>
-                      </mat-form-field>
-                </form>
-            </mat-card-content>
-            <mat-card-actions align='end'>
-                <button mat-button (click)="PostBlog(postForm)">POST</button>
-              </mat-card-actions>
-        </mat-card>
-        <!-- Feed -->
-        <div *ngIf="!isLoading">
-            <mat-card class="blog" *ngFor="let blog of (FeedBlog | async)">
-                <mat-card-header>
-                    <mat-card-title>{{blog.title}}</mat-card-title>
-                    <mat-card-subtitle>{{FormatDate(blog.createTime)}}</mat-card-subtitle>
-                </mat-card-header>
-                <mat-card-content BlogBody>
-                    {{blog.body}}
-                </mat-card-content>
-            </mat-card>
-        </div>
-
+        <router-outlet></router-outlet>
     </div>
     
 </div>

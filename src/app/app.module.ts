@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogBodyDirective } from './directives/blog-body.directive';
 import { TagBlogComponent } from './components/tag-blog/tag-blog.component';
+import { FeedComponent } from './components/feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { TagBlogComponent } from './components/tag-blog/tag-blog.component';
     BlogComponent,
     BlogBodyDirective,
     TagBlogComponent,
+    FeedComponent,
   ],
   imports: [
     BrowserModule,
