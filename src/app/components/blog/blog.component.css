@@ -1,0 +1,64 @@
+li{
+    float: left;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: cornflowerblue;
+}
+
+li a{
+    font-size: 1.3rem;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+}
+
+li a:hover{
+    color: lightgray;
+}
+
+h4{
+    margin: 0;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: rgb(243, 243, 243);
+}
+
+.rank{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem 0.7rem;
+    position: absolute;
+}
+
+.feed{
+    flex-direction: column;
+    display: flex;
+    padding: 1rem 0.4rem;
+    margin: 0 auto;
+    width: 50rem;
+    background-color: white;
+}
+
+.mat-card{
+    margin: 0.6rem auto;
+}
+
+.post{
+    width: 40rem;
+}
+
+.blog{
+    width: 40rem;
+    height: 10rem;
+}
