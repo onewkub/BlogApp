@@ -31,6 +31,7 @@ export class BlogComponent implements OnInit {
     this.FeedBlog = this.blogService.getAllBlog();
     this.FeedBlog.subscribe(res =>{
       console.log(res);
+      this.isLoading = false;
     })
   }
 

@@ -29,7 +29,8 @@ h4{
 .content{
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     background-color: rgb(243, 243, 243);
 }
 
@@ -61,4 +62,9 @@ h4{
 .blog{
     width: 40rem;
     height: 10rem;
+}
+
+::ng-deep .hashtag{
+    color: rgb(132, 153, 247);
+    cursor: pointer;
 }

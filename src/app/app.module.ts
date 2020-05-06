@@ -8,11 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule} from "@angular/material";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BlogBodyDirective } from './directives/blog-body.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BlogComponent
+    BlogComponent,
+    BlogBodyDirective
   ],
   imports: [
     BrowserModule,
