@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { BlogService } from 'src/app/services/blog.service';
 
@@ -10,38 +10,22 @@ import { BlogService } from 'src/app/services/blog.service';
 })
 export class FeedComponent implements OnInit {
 
-  PostForm : FormGroup;
+
   isLoading : boolean = true;
 
   FeedBlog : Observable<any>;
 
   constructor( 
-    private formBuilder: FormBuilder,
     private blogService: BlogService
     ) { 
-    this.PostForm = this.formBuilder.group(
-      {
-        title: ['', Validators.required],
-        body: ['', Validators.required]
-      }
-    )
+
   }
 
   ngOnInit() {
     this.FeedBlog = this.blogService.getAllBlog();
     this.FeedBlog.subscribe(res =>{
-      console.log(res);
       this.isLoading = false;
-    })
-  }
-
-  PostBlog(): void{
-    console.log(this.PostForm.value);
-    this.blogService.postBlog(this.PostForm.value).subscribe(res=>{
-      console.log(res);
     });
-    this.PostForm.clearValidators();
-    this.PostForm.reset();
   }
 
   FormatDate(date) : string{

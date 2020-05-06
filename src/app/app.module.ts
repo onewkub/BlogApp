@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BlogBodyDirective } from './directives/blog-body.directive';
 import { TagBlogComponent } from './components/tag-blog/tag-blog.component';
 import { FeedComponent } from './components/feed/feed.component';
+import { PostBlogComponent } from './components/post-blog/post-blog.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FeedComponent } from './components/feed/feed.component';
     BlogBodyDirective,
     TagBlogComponent,
     FeedComponent,
+    PostBlogComponent,
   ],
   imports: [
     BrowserModule,
