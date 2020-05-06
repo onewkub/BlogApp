@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatListModule, MatCardModule, MatButtonModule } from "@angular/material";
+import { MatListModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule} from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -18,7 +18,9 @@ import { MatListModule, MatCardModule, MatButtonModule } from "@angular/material
     BrowserAnimationsModule,
     MatListModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
