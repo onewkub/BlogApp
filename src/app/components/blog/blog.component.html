@@ -19,11 +19,11 @@
             <mat-card-content>
                 <form [formGroup]="PostForm" #postForm>
                     <mat-form-field>
-                        <input formControlName="title" type="text" matInput placeholder="Title">
+                        <input formControlName="title" type="text" matInput placeholder="Title" autocomplete="off">
                     </mat-form-field>
                     <mat-form-field style="width: 100%;" floatLabel="never">
                         <!-- <mat-label>HEY</mat-label> -->
-                        <textarea formControlName="body" rows="8" matInput placeholder="Hey Yeah Yahoo !!"></textarea>
+                        <textarea formControlName="body" rows="8" matInput placeholder="Hey Yeah Yahoo !!" autocomplete="off"></textarea>
                       </mat-form-field>
                 </form>
             </mat-card-content>
@@ -32,13 +32,13 @@
               </mat-card-actions>
         </mat-card>
         <!-- Feed -->
-        <mat-card class="blog">
+        <mat-card class="blog" *ngFor="let blog of (FeedBlog | async)">
             <mat-card-header>
-                <mat-card-title>Blog Title</mat-card-title>
-                <mat-card-subtitle>Create Date</mat-card-subtitle>
+                <mat-card-title>{{blog.title}}</mat-card-title>
+                <mat-card-subtitle>{{FormatDate(blog.createTime)}}</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>
-                Blog Body
+                {{blog.body}}
             </mat-card-content>
         </mat-card>
     </div>
