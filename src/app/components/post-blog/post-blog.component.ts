@@ -24,14 +24,11 @@ export class PostBlogComponent implements OnInit {
   }
 
   PostBlog(): void{
-    // console.log(this.PostForm.value);
     var hashtagList = this.FindHashtags(this.PostForm.value.body);
     this.blogService.postBlog(this.PostForm.value).subscribe(res=>{
-      console.log(res);
       var blogID = res.value.blogId;
-      var htList = hashtagList.map(ht => {return {Bid: blogID, TagName: ht, b: res.value} });
-      console.log(htList);
-      this.blogService.addTag(htList).subscribe(res=> console.log(res));
+      var htList = hashtagList.map(ht => {return {Bid: blogID, TagName: ht} });
+      this.blogService.addTag(htList);
     });
     this.PostForm.clearValidators();
     this.PostForm.reset();
@@ -42,7 +39,6 @@ export class PostBlogComponent implements OnInit {
     var result = searchText.match(regexp);
     if (result) {
         result = result.map(function(s){ return s.trim().replace('#', '');});
-        console.log(result);
         return result;
     } else {
         return false;
