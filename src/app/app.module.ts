@@ -9,12 +9,14 @@ import { MatListModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatI
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogBodyDirective } from './directives/blog-body.directive';
+import { TagBlogComponent } from './components/tag-blog/tag-blog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogComponent,
-    BlogBodyDirective
+    BlogBodyDirective,
+    TagBlogComponent,
   ],
   imports: [
     BrowserModule,

@@ -47,7 +47,7 @@ export class BlogComponent implements OnInit {
   FormatDate(date) : string{
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var _date = new Date(date);
-    var rlt = `Posted at ${_date.getDate()}/${months[_date.getMonth()]}/${_date.getFullYear()} at ${_date.getHours()}:${_date.getMinutes()}`;
+    var rlt = `Posted at ${_date.getDate()} ${months[_date.getMonth()]} ${_date.getFullYear()} at ${_date.getHours().toString().padStart(2, '0')}:${_date.getMinutes().toString().padStart(2, '0')}`;
     // console.log(rlt);
     return rlt;
   }
