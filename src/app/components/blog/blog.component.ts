@@ -22,4 +22,8 @@ export class BlogComponent implements OnInit {
   ngOnInit() {
   }
 
+  PostBlog(): void{
+    console.log(this.PostForm.value);
+  }
+
 }
