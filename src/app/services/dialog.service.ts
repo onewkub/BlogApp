@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material';
-import { PostBlogComponent } from '../components/post-blog/post-blog.component';
+import { EditDialogComponent } from '../components/edit-dialog/edit-dialog.component';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +11,11 @@ export class DialogService {
     private dialog: MatDialog
   ) { }
 
-  public openEditDialog(data){
-    var dialogRef = this.dialog.open(PostBlogComponent, {
+  public openEditDialog(_data){
+    // console.log(_data)
+    var dialogRef = this.dialog.open(EditDialogComponent, {
       width: "40rem",
+      data: _data
     });
     
   }

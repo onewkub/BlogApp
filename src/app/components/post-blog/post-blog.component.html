@@ -12,6 +12,6 @@
         </form>
     </mat-card-content>
     <mat-card-actions align='end'>
-        <button [disabled]="PostForm.value.title == '' || PostForm.value.body == '' " mat-button (click)="PostBlog(postForm)">POST</button>
+        <button [disabled]="PostForm.value.title == '' || PostForm.value.body == '' " mat-button (click)="PostBlog()">POST</button>
     </mat-card-actions>
 </mat-card>

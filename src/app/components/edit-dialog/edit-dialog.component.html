@@ -1,7 +1,7 @@
 <h2 mat-dialog-title *ngIf="isDialog">Edit Blog</h2>
 <mat-card class="post">
     <mat-card-content>
-        <form [formGroup]="PutBlog" #postForm>
+        <form [formGroup]="PutForm" #putForm>
             <mat-form-field>
                 <input formControlName="title" type="text" matInput placeholder="Title" autocomplete="off">
             </mat-form-field>
@@ -13,6 +13,6 @@
         </form>
     </mat-card-content>
     <mat-card-actions align='end'>
-        <button [disabled]="PutBlog.value.title == '' || PutBlog.value.body == '' " mat-button (click)="PutBlog(postForm)">POST</button>
+        <button [disabled]="PutForm.value.title == '' || PutForm.value.body == '' " mat-button (click)="PutBlog()">POST</button>
     </mat-card-actions>
 </mat-card>

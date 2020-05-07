@@ -49,6 +49,6 @@ import { EditDialogComponent } from './components/edit-dialog/edit-dialog.compon
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [PostBlogComponent]
+  entryComponents: [EditDialogComponent]
 })
 export class AppModule { }
