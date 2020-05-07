@@ -23,8 +23,4 @@ export class TagBlogComponent implements OnInit {
       this.Blogs.subscribe(()=> this.isLoading = false);
     });
   }
-
-  FormatDate(date) : string{
-    return this.blogsService.FormatDate(date);
-  }
 }

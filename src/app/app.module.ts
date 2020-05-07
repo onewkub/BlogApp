@@ -14,6 +14,7 @@ import { FeedComponent } from './components/feed/feed.component';
 import { PostBlogComponent } from './components/post-blog/post-blog.component';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { BlogContentComponent } from './components/blog-content/blog-content.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     PostBlogComponent,
     RankingComponent,
     NavbarComponent,
+    BlogContentComponent,
   ],
   imports: [
     BrowserModule,

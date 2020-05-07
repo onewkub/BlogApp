@@ -23,7 +23,4 @@ export class FeedComponent implements OnInit {
     this.FeedBlog.subscribe(() => this.isLoading = false);
   }
 
-  FormatDate(date) : string{
-    return this.blogService.FormatDate(date);
-  }
 }
