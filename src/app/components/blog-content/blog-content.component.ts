@@ -37,7 +37,7 @@ export class BlogContentComponent implements OnInit {
     dialogRef.afterClosed().subscribe(
       () => {
         if(dialogRef.componentInstance.confirm){
-          this.blogService.deleteBlog(this.blog.blogId);
+          this.blogService.deleteBlog(this.blog.blogId).subscribe();
         }
       }
     );
