@@ -3,8 +3,12 @@
         <mat-card-title>{{blog.title}}</mat-card-title>
         <mat-card-subtitle>{{FormatDate(blog.createTime)}}</mat-card-subtitle>
         <div class="dropdown">
-            <button mat-icon-button>
+            <button mat-icon-button  (focusout)="ToggleMore(more)" (click)="ToggleMore(more)" >
                 <mat-icon>more_vert</mat-icon>
+                <div #more class="dropdown-content">
+                    <a (click)="openEditDialog()">Edit</a>
+                    <a (click)="openDeleteDialog()">Delete</a>
+                  </div>
             </button>
         </div>
     </mat-card-header>

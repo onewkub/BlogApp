@@ -15,6 +15,7 @@ import { PostBlogComponent } from './components/post-blog/post-blog.component';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BlogContentComponent } from './components/blog-content/blog-content.component';
+import { EditDialogComponent } from './components/edit-dialog/edit-dialog.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { BlogContentComponent } from './components/blog-content/blog-content.com
     RankingComponent,
     NavbarComponent,
     BlogContentComponent,
+    EditDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +48,7 @@ import { BlogContentComponent } from './components/blog-content/blog-content.com
     HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [PostBlogComponent]
 })
 export class AppModule { }

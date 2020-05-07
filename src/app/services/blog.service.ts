@@ -10,32 +10,32 @@ export class BlogService {
 
   apiUrl = environment.apiURL;
   constructor(
-    
+
     private http: HttpClient
   ) { }
 
 
-  public getAllBlog(): Observable<any>{
+  public getAllBlog(): Observable<any> {
     return this.http.get(`${this.apiUrl}/blog`);
   }
 
-  public postBlog(postForm): Observable<any>{
+  public postBlog(postForm): Observable<any> {
     return this.http.post(`${this.apiUrl}/blog`, postForm);
   }
 
-  public putBlog(putForm, bid): Observable<any>{
-    return this.http.put(`${this.apiUrl}/blog/bid`, putForm);
+  public putBlog(putForm, bid): Observable<any> {
+    return this.http.put(`${this.apiUrl}/blog/${bid}`, putForm);
   }
 
-  public addTag(ht){
+  public addTag(ht) {
     return this.http.post(`${this.apiUrl}/tag`, ht);
   }
 
-  public getRanking(): Observable<any>{
+  public getRanking(): Observable<any> {
     return this.http.get(`${this.apiUrl}/tag/rank`);
   }
-  
-  public getBlogContainTag(tag: string): Observable<any>{
+
+  public getBlogContainTag(tag: string): Observable<any> {
     return this.http.get(`${this.apiUrl}/tag/${tag}`);
   }
 
@@ -44,5 +44,15 @@ export class BlogService {
     var _date = new Date(date);
     var rlt = `Posted at ${_date.getDate()} ${months[_date.getMonth()]} ${_date.getFullYear()} at ${_date.getHours().toString().padStart(2, '0')}:${_date.getMinutes().toString().padStart(2, '0')}`;
     return rlt;
-}
+  }
+  FindHashtags(searchText) {
+    var regexp = /(\s|^)\#\w\w+\b/gm
+    var result = searchText.match(regexp);
+    if (result) {
+      result = result.map(function (s) { return s.trim().replace('#', ''); });
+      return result;
+    } else {
+      return false;
+    }
+  }
 }

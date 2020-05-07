@@ -11,9 +11,10 @@ export class DialogService {
     private dialog: MatDialog
   ) { }
 
-  openDialog(){
+  public openEditDialog(data){
     var dialogRef = this.dialog.open(PostBlogComponent, {
       width: "40rem",
-    })
+    });
+    
   }
 }

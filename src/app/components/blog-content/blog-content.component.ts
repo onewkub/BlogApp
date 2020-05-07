@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { BlogService } from 'src/app/services/blog.service';
+import { DialogService } from 'src/app/services/dialog.service';
 
 @Component({
   selector: 'app-blog-content',
@@ -10,7 +11,8 @@ export class BlogContentComponent implements OnInit {
 
   @Input() blog : any;
   constructor(
-    private blogService: BlogService
+    private blogService: BlogService,
+    private dialogService: DialogService
   ) { }
 
   ngOnInit() {
@@ -20,4 +22,16 @@ export class BlogContentComponent implements OnInit {
     return this.blogService.FormatDate(date);
   }
 
+  ToggleMore(more){
+    more.classList.toggle("show");
+  }
+
+  openEditDialog(){
+    this.dialogService.openEditDialog(this.blog);
+    console.log('open Edit')
+  }
+
+  openDeleteDialog(){
+    console.log('open delete')
+  }
 }

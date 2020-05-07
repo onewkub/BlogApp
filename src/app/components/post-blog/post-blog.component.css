@@ -3,5 +3,6 @@
 }
 
 .post{
-    width: 40rem;
+    min-width: 20rem;
+    max-width: 40rem;
 }
