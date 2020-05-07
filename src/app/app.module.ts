@@ -13,6 +13,7 @@ import { TagBlogComponent } from './components/tag-blog/tag-blog.component';
 import { FeedComponent } from './components/feed/feed.component';
 import { PostBlogComponent } from './components/post-blog/post-blog.component';
 import { RankingComponent } from './components/ranking/ranking.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { RankingComponent } from './components/ranking/ranking.component';
     FeedComponent,
     PostBlogComponent,
     RankingComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

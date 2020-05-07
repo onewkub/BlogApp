@@ -1,31 +1,9 @@
-li{
-    float: left;
-}
-
-ul{
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: cornflowerblue;
+.navbar{
+    z-index: 2;
     top: 0;
     position: sticky;
-    z-index: 2;
 }
-
-li a{
-    font-size: 1.3rem;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 0.8rem 1rem;
-    text-decoration: none;
-}
-
-li a:hover{
-    color: lightgray;
-}
-
-.cotentBody{
+.cotent-body{
     z-index: 1;
     margin-top: 2rem;
 }
