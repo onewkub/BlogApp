@@ -28,7 +28,7 @@ export class PostBlogComponent implements OnInit {
     this.blogService.postBlog(this.PostForm.value).subscribe(res=>{
       var blogID = res.value.blogId;
       var htList = hashtagList.map(ht => {return {Bid: blogID, TagName: ht} });
-      this.blogService.addTag(htList);
+      this.blogService.addTag(htList).subscribe(res=> console.log(res));
     });
     this.PostForm.clearValidators();
     this.PostForm.reset();

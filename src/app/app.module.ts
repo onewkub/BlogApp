@@ -12,6 +12,7 @@ import { BlogBodyDirective } from './directives/blog-body.directive';
 import { TagBlogComponent } from './components/tag-blog/tag-blog.component';
 import { FeedComponent } from './components/feed/feed.component';
 import { PostBlogComponent } from './components/post-blog/post-blog.component';
+import { RankingComponent } from './components/ranking/ranking.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PostBlogComponent } from './components/post-blog/post-blog.component';
     TagBlogComponent,
     FeedComponent,
     PostBlogComponent,
+    RankingComponent,
   ],
   imports: [
     BrowserModule,
