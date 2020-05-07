@@ -1,6 +1,9 @@
 .mat-card{
     margin: 0.6rem auto;
 }
+.mat-spinner{
+    margin: 2rem auto;
+}
 
 .blog{
     width: 40rem;

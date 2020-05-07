@@ -7,6 +7,9 @@ ul{
     padding: 0;
     overflow: hidden;
     background-color: cornflowerblue;
+    top: 0;
+    position: sticky;
+    z-index: 2;
 }
 
 li a{
@@ -20,4 +23,9 @@ li a{
 
 li a:hover{
     color: lightgray;
+}
+
+.cotentBody{
+    z-index: 1;
+    margin-top: 2rem;
 }

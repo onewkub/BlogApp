@@ -2,6 +2,10 @@
     margin: 0.6rem auto;
 }
 
+.mat-spinner{
+    margin: 2rem auto;
+}
+
 .blog{
     width: 40rem;
     height: 10rem;

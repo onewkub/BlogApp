@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatListModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule} from "@angular/material";
+import { MatListModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatProgressSpinnerModule} from "@angular/material";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogBodyDirective } from './directives/blog-body.directive';
@@ -13,6 +13,7 @@ import { TagBlogComponent } from './components/tag-blog/tag-blog.component';
 import { FeedComponent } from './components/feed/feed.component';
 import { PostBlogComponent } from './components/post-blog/post-blog.component';
 import { RankingComponent } from './components/ranking/ranking.component';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { RankingComponent } from './components/ranking/ranking.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatProgressSpinnerModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule

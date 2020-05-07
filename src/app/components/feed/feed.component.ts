@@ -16,15 +16,11 @@ export class FeedComponent implements OnInit {
 
   constructor( 
     private blogService: BlogService,
-    ) { 
-
-  }
+    ) {}
 
   ngOnInit() {
     this.FeedBlog = this.blogService.getAllBlog();
-    this.FeedBlog.subscribe(res =>{
-      this.isLoading = false;
-    });
+    this.FeedBlog.subscribe(() => this.isLoading = false);
   }
 
   FormatDate(date) : string{
