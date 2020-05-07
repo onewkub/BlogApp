@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-ranking',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RankingComponent implements OnInit {
 
-  constructor() { }
+  tagRank : Observable<any>;
+  constructor(
+    private blogService: BlogService
+  ) { }
 
   ngOnInit() {
+    this.tagRank = this.blogService.getRanking();
   }
 
 }

@@ -31,4 +31,8 @@ export class BlogService {
   public addTag(ht){
     return this.http.post(`${this.apiUrl}/tag`, ht);
   }
+
+  public getRanking(): Observable<any>{
+    return this.http.get(`${this.apiUrl}/tag/rank`);
+  }
 }

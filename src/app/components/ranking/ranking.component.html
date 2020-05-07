@@ -1,4 +1,6 @@
 <h4># Ranking</h4>
-<mat-list>
-    <mat-list-item role="listitem"></mat-list-item>
-</mat-list>
+<ol>
+    <li *ngFor="let tag of (tagRank | async)">
+        <a routerLink="{{tag.tagName}}">#{{tag.tagName}}</a>
+    </li>
+</ol>

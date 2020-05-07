@@ -1,3 +1,16 @@
 h4{
     margin: 0;
 }
+ol {
+    margin-top: 0.5rem;
+    padding-left: 1.8rem;
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(132, 153, 247);
+}
+
+li a:hover{
+    color: gray;
+}
