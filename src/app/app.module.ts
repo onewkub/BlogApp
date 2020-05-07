@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatListModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatProgressSpinnerModule} from "@angular/material";
+import { MatListModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatProgressSpinnerModule, MatDialogModule, MatIconModule} from "@angular/material";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogBodyDirective } from './directives/blog-body.directive';
@@ -37,9 +37,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MatFormFieldModule,
     MatInputModule,
     MatProgressSpinnerModule,
+    MatDialogModule,
+    MatIconModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
