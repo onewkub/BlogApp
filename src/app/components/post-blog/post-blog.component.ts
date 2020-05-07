@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from 'src/app/services/blog.service';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-post-blog',
@@ -14,8 +14,8 @@ export class PostBlogComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private blogService : BlogService) { 
     this.PostForm = this.formBuilder.group(
       {
-        title: ['', Validators.required],
-        body: ['', Validators.required]
+        title: [''],
+        body: ['']
       }
     )
   }

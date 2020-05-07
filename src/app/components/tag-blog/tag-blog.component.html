@@ -1,1 +1,11 @@
-<p>tag-blog works!</p>
+<div *ngIf="!isLoading">
+    <mat-card class="blog" *ngFor="let blog of (Blogs | async)">
+        <mat-card-header>
+            <mat-card-title>{{blog.title}}</mat-card-title>
+            <mat-card-subtitle>{{FormatDate(blog.createTime)}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content BlogBody>
+            {{blog.body}}
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { BlogService } from 'src/app/services/blog.service';
 
@@ -16,7 +15,7 @@ export class FeedComponent implements OnInit {
   FeedBlog : Observable<any>;
 
   constructor( 
-    private blogService: BlogService
+    private blogService: BlogService,
     ) { 
 
   }
@@ -29,10 +28,6 @@ export class FeedComponent implements OnInit {
   }
 
   FormatDate(date) : string{
-    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var _date = new Date(date);
-    var rlt = `Posted at ${_date.getDate()} ${months[_date.getMonth()]} ${_date.getFullYear()} at ${_date.getHours().toString().padStart(2, '0')}:${_date.getMinutes().toString().padStart(2, '0')}`;
-    // console.log(rlt);
-    return rlt;
+    return this.blogService.FormatDate(date);
   }
 }

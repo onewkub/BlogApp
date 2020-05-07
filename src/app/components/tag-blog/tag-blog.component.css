@@ -1,0 +1,17 @@
+.mat-card{
+    margin: 0.6rem auto;
+}
+
+.blog{
+    width: 40rem;
+    height: 10rem;
+}
+
+::ng-deep .hashtag{
+    color: rgb(132, 153, 247);
+    cursor: pointer;
+}
+
+::ng-deep .hashtag:hover{
+    text-decoration: underline;
+}
