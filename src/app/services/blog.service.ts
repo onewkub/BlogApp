@@ -27,6 +27,10 @@ export class BlogService {
     return this.http.put(`${this.apiUrl}/blog/${bid}`, putForm);
   }
 
+  public deleteBlog(bid): Observable<any>{
+    return this.http.delete(`${this.apiUrl}/blog/${bid}`);
+  }
+
   public addTag(ht) {
     return this.http.post(`${this.apiUrl}/tag`, ht);
   }

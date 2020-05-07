@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { EditDialogComponent } from '../components/edit-dialog/edit-dialog.component';
+import { ConfirmDialogComponent } from '../components/confirm-dialog/confirm-dialog.component';
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +19,13 @@ export class DialogService {
       data: _data
     });
     
+  }
+
+  public openDeleteDialog(){
+    var dialogRef = this.dialog.open(ConfirmDialogComponent,{
+      width: "20rem",
+      data: {title: "Remove Blog Confirmation", body: "Are you sure to remove Blog?"}
+    })
+    return dialogRef;
   }
 }

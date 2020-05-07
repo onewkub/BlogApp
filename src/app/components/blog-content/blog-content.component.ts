@@ -10,6 +10,7 @@ import { DialogService } from 'src/app/services/dialog.service';
 export class BlogContentComponent implements OnInit {
 
   @Input() blog : any;
+  more : any;
   constructor(
     private blogService: BlogService,
     private dialogService: DialogService
@@ -28,10 +29,17 @@ export class BlogContentComponent implements OnInit {
 
   openEditDialog(){
     this.dialogService.openEditDialog(this.blog);
-    console.log('open Edit')
+
   }
 
   openDeleteDialog(){
-    console.log('open delete')
+    var dialogRef = this.dialogService.openDeleteDialog();
+    dialogRef.afterClosed().subscribe(
+      () => {
+        if(dialogRef.componentInstance.confirm){
+          this.blogService.deleteBlog(this.blog.blogId);
+        }
+      }
+    );
   }
 }

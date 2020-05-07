@@ -16,6 +16,7 @@ import { RankingComponent } from './components/ranking/ranking.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BlogContentComponent } from './components/blog-content/blog-content.component';
 import { EditDialogComponent } from './components/edit-dialog/edit-dialog.component';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { EditDialogComponent } from './components/edit-dialog/edit-dialog.compon
     NavbarComponent,
     BlogContentComponent,
     EditDialogComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +51,6 @@ import { EditDialogComponent } from './components/edit-dialog/edit-dialog.compon
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [EditDialogComponent]
+  entryComponents: [EditDialogComponent, ConfirmDialogComponent]
 })
 export class AppModule { }
